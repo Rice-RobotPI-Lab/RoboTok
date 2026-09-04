@@ -431,6 +431,11 @@ img.affil-logo {
 }
 .link-btn:hover { transform: translateY(-2px); background: var(--accent); box-shadow: 0 6px 18px rgba(53,120,196,.28); }
 .link-btn svg { width: 18px; height: 18px; fill: currentColor; }
+/* Brand marks that keep their own colours -- arXiv's X and the Hugging Face
+   face -- ship as their own files, so they take neither the currentColor fill
+   above nor the button's hover colour. Sized by height, since the face is a
+   little wider than it is tall; the arXiv file is square. */
+.link-btn .brand-icon { width: auto; height: 18px; }
 .link-btn.is-disabled {
   border: 1px solid rgba(255, 255, 255, .24);
   background: rgba(10, 22, 40, .42); color: rgba(255, 255, 255, .74) !important; cursor: not-allowed;
@@ -530,21 +535,6 @@ figcaption b { color: var(--ink); }
 .project-video-player:hover {
   box-shadow: 0 16px 42px rgba(31, 45, 61, .22);
 }
-
-/* The hero video is a full-bleed background, following the CHORD reference
-   composition while retaining RoboTok's own title and metadata. */
-.hero-replay {
-  position: absolute; z-index: 2; right: 1.5rem; bottom: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px;
-  padding: .4rem .95rem;
-  font-family: var(--font-display); font-size: .8rem;
-  color: #fff; background: rgba(5, 14, 28, .52);
-  backdrop-filter: blur(8px);
-  cursor: pointer; opacity: .72;
-  transition: opacity .2s ease, background .15s ease;
-}
-.paper-header:hover .hero-replay, .hero-replay:focus-visible { opacity: 1; }
-.hero-replay:hover { background: var(--accent); }
 
 video {
   display: block;
@@ -1171,7 +1161,6 @@ pre.bibtex code {
   .logo-row { --logo-h: 32px; }
   .link-row { gap: .55rem; margin-top: 1.25rem; }
   .link-btn { padding: .5rem .85rem; font-size: .82rem; }
-  .hero-replay { right: .8rem; bottom: .8rem; }
   h2.section-title { font-size: 1.5rem; }
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
   .section { padding: 2.25rem 1rem; }
