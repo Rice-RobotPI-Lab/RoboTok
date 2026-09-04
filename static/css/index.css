@@ -296,6 +296,23 @@ p.section-sub.pipeline { padding-top: 2.5rem; }
 .author-list sup { font-size: .62em; font-weight: 500; color: var(--accent-soft); margin-left: .05em; }
 /* Affiliation 2 is NVIDIA, so its marker carries NVIDIA's green. */
 .author-list sup.a2 { color: var(--nvidia-light); }
+
+/* A name that links to a personal page keeps the author list's colour and
+   carries a faint underline, so the row still reads as one line of names
+   rather than a row of buttons. Hover and keyboard focus brighten both. */
+.author-list a.author-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(207, 228, 251, .4);
+  text-decoration-thickness: 1px;
+  text-underline-offset: .18em;
+  transition: color .15s ease, text-decoration-color .15s ease;
+}
+.author-list a.author-link:hover,
+.author-list a.author-link:focus-visible {
+  color: #fff;
+  text-decoration-color: #fff;
+}
 .affil-list {
   font-family: var(--font-display);
   font-size: 1rem;
