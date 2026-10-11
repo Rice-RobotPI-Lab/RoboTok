@@ -1,0 +1,44 @@
+{
+  "cols": 40,
+  "rows": 25,
+  "stage_aspect": 2.844444,
+  "zoom": 40,
+  "hero_row": 12,
+  "hero_col": 20,
+  "query_row": 19,
+  "query_col": 29,
+  "query_w": 5,
+  "query_h": 2,
+  "duration": 5.0,
+  "layers": [
+    {
+      "src": "grid.mp4",
+      "r0": 0,
+      "c0": 0,
+      "w": 40,
+      "h": 25
+    },
+    {
+      "src": "mid.mp4",
+      "r0": 8,
+      "c0": 16,
+      "w": 8,
+      "h": 8
+    },
+    {
+      "src": "queries.mp4",
+      "r0": 19,
+      "c0": 29,
+      "w": 5,
+      "h": 2,
+      "role": "queries"
+    },
+    {
+      "src": "hero.mp4",
+      "r0": 12,
+      "c0": 20,
+      "w": 1,
+      "h": 1
+    }
+  ]
+}
